@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+}
+.container {
+    display: grid;
+}
+/* Estrutura dos links da página */
+.wrapper {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-template-columns: repeat(2,1fr);
+    background-color: #333;
+    text-align: center;
+}
+/* A partir dessa linha de código até a linha 61 é para a estilização
+e posicionamento dos linls*/
+ul {
+    list-style-type: none;
+}
+li {
+    display: inline-block;
+}
+li ul {
+    position: absolute;
+    left: 431px;
+    display: none;
+    margin-top: 16px;
+}
+li:hover ul {
+    display: flex;
+    background-color: #333; 
+    padding: 17px;
+    font-size: 20px;
+    transform: 0,5s;
+    gap: inherit;
+}
+a,a:link{
+    font-size: 20px;
+    text-decoration: none;
+    padding: 17px 28px;
+    color: white;
+
+}
+a:hover{
+    background-color:rgb(245, 245, 245);
+    color: black;
+    border:0;
+    transform: 0,5s;
+}
+.linke a:hover{
+    background-color: #0e76a8;
+    color: aliceblue;
+    font-weight: 500;
+    font-style: oblique;    
+}
+.insta a:hover {
+    background-color:rgb(248, 37, 83);
+    color: aliceblue;
+    font-weight: 500;
+    font-style: oblique;    
+}
+/* Fontes usadas para legendas, textos e títulos 63 a 84*/
+.font {
+    font-family:'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 14px;
+    font-size: x-large;
+    font-weight: 700;
+    color: white;
+    border-left: 1px solid white;
+}
+.font2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+   font-size: medium;
+}
+.font3 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 14px;
+    font-size: large;
+    font-weight: 700;
+    color: black;
+}
+/* Posicionamentodo conteúdo e media query para as imagens
+não consegui fazer que todas as imagens fique uma debaixo da outra
+em uma página pequena*/
+.conteudo {
+    grid-column-start: 4;
+    grid-column-end: 12;
+    padding-left: 15px;
+    padding-right: 30px;
+    text-align: left;
+}
+@media only screen and (max-width: 767px){
+    .tela {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .wrapper{
+        grid-column-start: 1;
+        grid-column-end: 1;
+
+    }
+    .imagem {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .estru {
+        grid-column-start: 1;
+        grid-column-end: 1;
+
+    }
+}
+/* Estrutura das imagens e seus posicionamentos*/
+img {
+    margin: 0;
+    width: 300px;
+   }
+.imagem {
+    clear: both;
+    display: flex;
+    align-items: center;
+
+}
+.estru {
+    flex: 1;
+    text-align: center;
+}
+.estru img {
+    max-width: 80%;
+    max-height: 200px;
+}
